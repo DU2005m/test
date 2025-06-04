@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Captions</title>
+</head>
+<body>
+    <h1>Качи аудио/видео файл за надписи</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="audio/*,video/*" required>
+        <button type="submit">Качи</button>
+    </form>
+    {% if transcript %}
+    <h2>Транскрипция</h2>
+    <pre>{{ transcript }}</pre>
+    {% endif %}
+</body>
+</html>
